@@ -37,7 +37,11 @@ body {
     position: relative;
     
      margin: 90px auto 0;
-    
+
+}
+
+.card-wrapper {
+    display: block;
 }
 
 /* キラキラ（軽めにしてスマホ負荷減） */
