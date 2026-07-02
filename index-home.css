@@ -6,7 +6,7 @@ body {
 
     background: url("bg.png");
 
-    background-size: 2000px;  /* ←ここがポイント */
+    background-size: cover;　　/* ←ここがポイント */ 
     background-position: center;
     background-repeat: repeat;
 
