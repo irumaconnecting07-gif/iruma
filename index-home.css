@@ -1,0 +1,417 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;700&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Zen Maru Gothic', sans-serif;
+
+    background: url("bg.png");
+
+    background-size: 2000px;  /* ←ここがポイント */
+    background-position: center;
+    background-repeat: repeat;
+
+    display: flex;
+    justify-content: center;
+
+    padding: 18px 12px;
+}
+
+
+/* カード（スマホ最適） */
+.card {
+    width: 100%;
+    max-width: 420px;
+
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(10px);
+
+    border-radius: 26px;
+    padding: 22px;
+
+    border: 2px solid #ffd6e8;
+
+    box-shadow:
+        0 10px 30px rgba(255,182,193,0.18);
+
+    overflow: hidden;
+
+    position: relative;
+
+    margin-top: 90px;
+}
+
+/* キラキラ（軽めにしてスマホ負荷減） */
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(#ffd6e8 1px, transparent 1px);
+    background-size: 16px 16px;
+    opacity: 0.18;
+    pointer-events: none;
+}
+
+/* レース */
+.card::after {
+    content: "";
+    position: absolute;
+    inset: 8px;
+    border-radius: 22px;
+    border: 1px dashed #ffc1dc;
+    pointer-events: none;
+}
+/* wrapper */
+.card-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+/* リボン */
+.top-ribbon {
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 180px;
+    height: auto;
+
+    z-index: 999;
+    pointer-events: none;
+}
+
+
+/* リボン（少し小さく） */
+.ribbon {
+    position: absolute;
+    top: -13px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: inline-block;  /* ←追加 */
+
+    background: linear-gradient(135deg, #ffb6d5, #e6c7ff);
+    color: white;
+
+    padding: 6px 180px;
+    font-size: 15px;
+
+    border-radius: 0 0 12px 12px;
+    font-weight: bold;
+
+    box-shadow: 0 6px 14px rgba(255,182,193,0.25);
+
+    text-align: center;
+
+    width: auto; 
+}
+
+/* アイコン（スマホちょい小さめ） */
+.icon {
+    width: 82px;
+    height: 82px;
+    margin: 18px auto 8px;
+
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ffe4f0, #f3eaff);
+    border: 3px solid #ffd6e8;
+
+    box-shadow:
+        0 0 0 5px rgba(255,255,255,0.7),
+        0 6px 14px rgba(255,182,193,0.2);
+}
+
+.icon img {
+    width: 95%;
+    height: 95%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* 名前 */
+.name {
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    color: #5a4a66;
+}
+
+/* サブ */
+.subtitle {
+    text-align: center;
+    font-size: 12px;
+    color: #8a7b95;
+    margin-bottom: 14px;
+}
+
+/* 区切り */
+.hr {
+    height: 10px;
+    margin: 14px 0;
+    background:
+        repeating-linear-gradient(
+            45deg,
+            #ffe4f0,
+            #ffe4f0 6px,
+            #fff 6px,
+            #fff 12px
+        );
+    border-radius: 10px;
+    opacity: 0.75;
+}
+
+/* 見出し */
+.section-title {
+    font-size: 12.5px;
+    font-weight: bold;
+    margin-top: 14px;
+    padding-left: 8px;
+    border-left: 4px solid #e6c7ff;
+    color: #6b5a78;
+}
+
+/* テキスト */
+.text {
+    font-size: 12.5px;
+    color: #6a5a72;
+    line-height: 1.6;
+    white-space: pre-line;
+}
+
+/* 💗ボタン強化（ここがメイン） */
+.button {
+    display: block;
+    text-align: center;
+
+    padding: 10px 18px;
+    margin-top: 6px;
+
+    line-height: 1.4;
+
+    border-radius: 18px;
+
+    text-decoration: none;
+    font-weight: bold;
+
+    color: white;
+
+    /* 宝石っぽいグラデ */
+    background: linear-gradient(
+        135deg,
+        #ff9ec4,
+        #d9c7ff,
+        #ffb6d5
+    );
+
+    background-size: 200% 200%;
+
+    box-shadow:
+        0 8px 18px rgba(255,182,193,0.25),
+        inset 0 0 10px rgba(255,255,255,0.35);
+
+    transition: all 0.2s ease;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* レースフリル枠 */
+.button::after {
+    content: "";
+    position: absolute;
+    inset: 3px;
+    border-radius: 16px;
+
+    /* レースっぽいギザギザ */
+    border: 1px dashed rgba(255, 255, 255, 0.6);
+
+    /* うっすら内側の光 */
+    box-shadow:
+        inset 0 0 8px rgba(255,255,255,0.3);
+
+    pointer-events: none;
+}
+
+/* ふわっと浮く */
+.button:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.08);
+}
+
+/* 押したときスマホ最適 */
+.button:active {
+    transform: scale(0.98);
+}
+
+
+/* スクロール時でも見やすく */
+body {
+    -webkit-text-size-adjust: 100%;
+}
+
+/* 横並びの箱 */
+.button-row {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+/* ハートボタン */
+.button.square {
+    flex: 1;
+    aspect-ratio: 1 / 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-image: url("heart_lace.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 85%;
+
+    border: none;
+
+    box-shadow: none;
+
+    transition: transform 0.15s ease;
+
+    color: #ffffff;
+
+    text-shadow:
+    0 0 3px rgba(255, 215, 232, 0.9),
+    0 0 8px rgba(255, 125, 179, 0.5);
+}
+
+
+
+/* アイコン大きめに */
+.button.square span {
+    font-size: 11px;
+}
+
+.button.square:hover {
+    transform: translateY(-3px) scale(1.05);
+    filter: brightness(1.1);
+
+    text-shadow:
+    0 0 6px rgba(255, 215, 232, 1),
+    0 0 14px rgba(255, 125, 179, 0.9),
+    0 0 26px rgba(255, 125, 179, 0.7);
+}
+
+.card::before,
+.card::after {
+    z-index: 0;
+    pointer-events: none;
+}
+
+.card > * {
+    position: relative;
+    z-index: 1;
+}
+/* =========================
+   Like
+========================= */
+
+.like-box{
+
+    max-width:950px;
+
+    margin:0 auto 60px;
+
+}
+
+
+/* グループごとの余白 */
+
+.favorite-group{
+
+    margin-bottom:35px;
+
+}
+
+
+/* 小見出し */
+
+.group-title{
+
+    display:inline-block;
+
+    margin:0 0 12px 8px;
+
+    padding-bottom:4px;
+
+    font-family:"Cormorant Garamond", serif;
+
+    font-size:26px;
+
+    font-weight:600;
+
+    letter-spacing:2px;
+
+    color:#7b2434;
+
+    border-bottom:2px solid #7b2434;
+
+}
+
+.group-title::before{
+
+    content:"✦ ";
+
+}
+
+
+/* ボックス */
+
+.favorite-card{
+
+    background:#ffffff;
+
+    border:1px solid #d8d8d8;
+
+    border-radius:12px;
+
+    padding:22px 26px;
+
+    box-shadow:0 6px 18px rgba(0,0,0,.05);
+
+}
+
+
+/* テキスト */
+
+.favorite-card p{
+
+    margin:8px 0;
+
+    line-height:1.8;
+
+    color:#333;
+
+}
+
+
+/* ホバー */
+
+.favorite-card:hover{
+
+    border-color:#7b2434;
+
+    transform:translateY(-2px);
+
+    transition:.2s;
+
+}
+
+.space{
+    height:5px;
+}
