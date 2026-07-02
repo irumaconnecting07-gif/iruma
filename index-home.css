@@ -5,12 +5,9 @@ body {
     font-family: 'Zen Maru Gothic', sans-serif;
 
     background: url("bg.png");
-
-    background-size: cover;　　/* ←ここがポイント */ 
+    background-size: cover; /* ←ここがポイント */
     background-position: center;
     background-repeat: repeat;
-   
-
     padding: 18px 12px;
 
     -webkit-text-size-adjust: 100%;
