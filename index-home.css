@@ -10,9 +10,7 @@ body {
     background-repeat: repeat;
     padding: 18px 12px;
 
-    -webkit-text-size-adjust: 100%;
-
-    margin: 90px auto 0;
+    margin: 0;
 }
 
 
@@ -37,8 +35,9 @@ body {
     overflow: hidden;
 
     position: relative;
-
-    margin-top: 90px;
+    
+     margin: 90px auto 0;
+    
 }
 
 /* キラキラ（軽めにしてスマホ負荷減） */
