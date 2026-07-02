@@ -1,0 +1,183 @@
+body {
+  margin: 0;
+  font-family: "Zen Old Mincho", serif;
+  background: url("../img/background.jpg") center / cover no-repeat fixed;
+}
+
+h1 {
+  text-align: center;
+  color: #ff4f86;
+}
+
+/* 🔍検索 */
+.search-wrap {
+  display: flex;
+  align-items: center;
+  width: 60%;
+  margin: 14px auto;
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 79, 134, 0.25);
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(8px);
+}
+
+.search-icon {
+  margin-right: 8px;
+}
+
+#searchBox {
+  border: none;
+  outline: none;
+  background: transparent;
+  flex: 1;
+}
+
+/* ボタン */
+.buttons {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+button {
+  margin: 4px;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 999px;
+  background: #ffe3ec;
+  cursor: pointer;
+}
+
+/* リスト */
+.list {
+  max-width: 800px;
+  margin: auto;
+  padding: 10px;
+}
+
+/* カード */
+.item {
+  background: white;
+  border-radius: 16px;
+  margin-bottom: 16px;
+  padding: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+/* お気に入り */
+.item.favorite {
+  border: 2px solid rgba(255, 79, 134, 0.4);
+}
+
+/* キラッ */
+.item.favorite::after {
+  content: "";
+  position: absolute;
+  top: -60%;
+  left: -60%;
+  width: 40%;
+  height: 220%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.7),
+    transparent
+  );
+  transform: rotate(25deg);
+  opacity: 0;
+}
+
+.item.favorite:hover::after {
+  animation: shine 0.9s ease;
+}
+
+@keyframes shine {
+  0% { left: -60%; opacity: 0; }
+  30% { opacity: 0.6; }
+  100% { left: 140%; opacity: 0; }
+}
+
+/* 画像 */
+.item img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.title {
+  font-weight: bold;
+}
+
+.meta {
+  font-size: 12px;
+  color: #666;
+}
+
+.meta div {
+  margin-top: 2px;
+}
+
+/* タグ */
+.tag {
+  display: inline-block;
+  font-size: 10px;
+  background: #ffe3ec;
+  padding: 3px 8px;
+  border-radius: 999px;
+  margin-right: 4px;
+}
+
+.header {
+  text-align: center;
+  margin-top: 20px;
+  position: relative;
+}
+
+/* 🎀リボン */
+.ribbon {
+  width: 220px;   /* 好きに調整 */
+  height: auto;
+  display: block;
+  margin: 0 auto 10px;
+
+  pointer-events: none;
+
+  filter: drop-shadow(0 0 8px rgba(255, 192, 203, 0.5));
+}
+
+/* 区切り線 */
+.divider {
+  display: block;
+  width: 60%;
+  margin: 10px auto;
+
+  height: auto;
+  opacity: 0.7;
+
+  pointer-events: none;
+}
+
+#toTopBtn {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  padding: 10px 16px;
+  border-radius: 999px;
+
+  background: rgba(255, 79, 134, 0.9);
+  color: white;
+  text-decoration: none;
+
+  font-size: 14px;
+
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  transition: 0.2s ease;
+}
+
+#toTopBtn:hover {
+  transform: translateX(-50%) scale(1.05);
+  background: rgba(255, 79, 134, 1);
+}
