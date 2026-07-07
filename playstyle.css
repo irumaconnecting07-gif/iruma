@@ -1,0 +1,314 @@
+/* =========================
+   Play Style
+   Message Card Style
+========================= */
+
+
+body {
+  margin: 0;
+  font-family: "Zen Old Mincho", serif;
+
+  background: #fff4f6;
+  color: #4d353a;
+}
+
+
+/* ページ全体 */
+.playstyle-page {
+
+  width: 90%;
+  max-width: 850px;
+
+  margin: 70px auto;
+
+}
+
+
+/* タイトル */
+
+.playstyle-page h1 {
+
+  text-align: center;
+
+  color: #b85c72;
+
+  font-size: 2.6rem;
+
+  letter-spacing: 0.15em;
+
+  margin-bottom: 60px;
+
+}
+
+
+/* タイトル飾り */
+
+.playstyle-page h1::before,
+.playstyle-page h1::after {
+
+  content: "♡";
+
+  color: #d46a83;
+
+  font-size: 1.5rem;
+
+  margin: 0 15px;
+
+}
+
+
+
+/* =========================
+   メッセージカード
+========================= */
+
+
+.style-box {
+
+  position: relative;
+
+
+  background: #ffffff;
+
+
+  border: 2px solid #edb4c2;
+
+
+  border-radius: 18px;
+
+
+  padding: 35px 40px;
+
+
+  margin-bottom: 55px;
+
+
+  box-shadow:
+
+    0 10px 25px rgba(184, 92, 114, 0.15);
+
+
+  transition: 0.3s;
+
+}
+
+
+
+/* カードホバー */
+
+.style-box:hover {
+
+  transform: translateY(-5px);
+
+}
+
+
+
+/* =========================
+   飾り画像
+========================= */
+
+
+.style-box::before {
+
+  content: "";
+
+
+  position: absolute;
+
+
+  top: -28px;
+
+  left: 25px;
+
+
+  width: 60px;
+
+  height: 60px;
+
+
+  background-image: url("stamp.png");
+
+
+  background-size: contain;
+
+  background-repeat: no-repeat;
+
+  background-position: center;
+
+
+}
+
+
+
+/* =========================
+   見出し
+========================= */
+
+
+.style-box h2 {
+
+  color: #b85c72;
+
+
+  font-size: 1.35rem;
+
+
+  margin-top: 0;
+
+
+  padding-bottom: 12px;
+
+
+  border-bottom:
+
+    1px dashed #e5a6b5;
+
+
+}
+
+
+
+/* =========================
+   本文
+========================= */
+
+
+.style-box p {
+
+  line-height: 2;
+
+
+  margin: 15px 0;
+
+
+}
+
+
+
+/* =========================
+   リスト
+========================= */
+
+
+.style-box ul {
+
+  padding-left: 1.5em;
+
+
+}
+
+
+.style-box li {
+
+  line-height: 2;
+
+
+}
+
+
+.style-box li::marker {
+
+  color: #d46a83;
+
+}
+
+
+
+/* =========================
+   スマホ対応
+========================= */
+
+
+@media screen and (max-width: 600px) {
+
+
+  .playstyle-page {
+
+    width: 85%;
+
+    margin: 40px auto;
+
+  }
+
+
+  .playstyle-page h1 {
+
+    font-size: 2rem;
+
+  }
+
+
+  .style-box {
+
+    padding: 30px 20px;
+
+  }
+
+
+  .style-box::before {
+
+    width: 45px;
+
+    height: 45px;
+
+    top: -20px;
+
+  }
+
+
+}
+/* =========================
+   Homeへ戻るボタン
+========================= */
+
+.back-home {
+
+  text-align: center;
+
+  margin-top: 50px;
+
+}
+
+
+.back-home a {
+
+  display: inline-block;
+
+  text-decoration: none;
+
+
+  color: #ffffff;
+
+  background: #c85a72;
+
+
+  padding: 12px 35px;
+
+
+  border-radius: 50px;
+
+
+  font-size: 1rem;
+
+
+  letter-spacing: 0.1em;
+
+
+  box-shadow:
+    0 5px 15px rgba(184, 92, 114, 0.2);
+
+
+  transition: 0.3s;
+
+}
+
+
+
+.back-home a:hover {
+
+  transform: translateY(-3px);
+
+  background: #b85c72;
+
+}
