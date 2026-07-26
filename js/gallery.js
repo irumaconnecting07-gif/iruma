@@ -1,5 +1,15 @@
 const posts = [
   /* 📸正方形 */
+    {
+    title: "レプリカントの葬列",
+    image: "img/repu.png",
+    type: "square", 
+    favorite: true,  
+    tags: ["HO3", "2026-07"],
+    character: "翅玄",
+    ho: "HO1"
+  },
+  
   {
     title: "AreAy",
     image: "img/AreAy.jpg",
