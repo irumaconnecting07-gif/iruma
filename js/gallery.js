@@ -5,7 +5,7 @@ const posts = [
     image: "img/repu.png",
     type: "square", 
     favorite: true,  
-    tags: ["HO3", "2026-07"],
+    tags: ["HO1", "2026-07"],
     character: "翅玄",
     ho: "HO1"
   },
