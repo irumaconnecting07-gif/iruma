@@ -1,5 +1,6 @@
 const posts = [
   /* 📸正方形 */
+  
     {
     title: "レプリカントの葬列",
     image: "img/repu.png",
