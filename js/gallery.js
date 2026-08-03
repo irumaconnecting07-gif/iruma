@@ -21,15 +21,6 @@ const posts = [
     ho: "花が丘継続"
   },
   
-      {
-    title: "Make omelet's Escape！",
-    image: "img/meked.png",
-    type: "square", 
-    favorite: true,  
-    tags: ["HO1", "2026-08"],
-    character: "早乙女 桜姫",
-    ho: "花が丘継続"
-  },
   
     {
     title: "レプリカントの葬列",
